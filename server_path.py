@@ -5,7 +5,7 @@ import argsparser
 from flask_restplus import *
 from flask import *
 
-ns = Namespace('jingyanwang_api', description='')
+ns = Namespace('jessica', description='')
 args = argsparser.prepare_args()
 
 parser = ns.parser()
@@ -14,7 +14,7 @@ parser.add_argument('text', type=str, location='json')
 req_fields = {'text': fields.String(\
 	example = u"this is an input text")\
 	}
-jingyanwang_api_req = ns.model('jingyanwang_api_req', req_fields)
+jingyanwang_api_req = ns.model('jessica', req_fields)
 
 attribute = ns.model('', \
 	{'entity': fields.String,\
@@ -27,7 +27,7 @@ rsp_fields = {\
 	'running_time':fields.Float\
 	}
 
-jingyanwang_api_rsp = ns.model('jingyanwang_api_rsp', rsp_fields)
+jingyanwang_api_rsp = ns.model('jessica', rsp_fields)
 
 @ns.route('/predict')
 class jingyanwang_api(Resource):
