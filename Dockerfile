@@ -7,7 +7,6 @@ RUN apt-get install -y bzip2
 RUN apt-get install -y wget
 RUN apt-get install -y gcc 
 RUN apt-get install -y git 
-#RUN apt-get install -y python python-dev python-pip 
 RUN apt-get install -y python3 
 RUN apt-get install -y python3-pip 
 
