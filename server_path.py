@@ -14,7 +14,7 @@ parser.add_argument('text', type=str, location='json')
 req_fields = {'text': fields.String(\
 	example = u"this is an input text")\
 	}
-jingyanwang_api_req = ns.model('jessica', req_fields)
+jessica_api_req = ns.model('jessica', req_fields)
 
 attribute = ns.model('', \
 	{'entity': fields.String,\
@@ -27,14 +27,14 @@ rsp_fields = {\
 	'running_time':fields.Float\
 	}
 
-jingyanwang_api_rsp = ns.model('jessica', rsp_fields)
+jessica_api_rsp = ns.model('jessica', rsp_fields)
 
 @ns.route('/predict')
-class jingyanwang_api(Resource):
+class jessica_api(Resource):
 	def __init__(self, *args, **kwargs):
-		super(jingyanwang_api, self).__init__(*args, **kwargs)
-	@ns.marshal_with(jingyanwang_api_rsp)
-	@ns.expect(jingyanwang_api_req)
+		super(jessica_api, self).__init__(*args, **kwargs)
+	@ns.marshal_with(jessica_api_rsp)
+	@ns.expect(jessica_api_req)
 	def post(self):		
 		start = time.time()
 		try:			
