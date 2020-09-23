@@ -19,8 +19,8 @@ RUN pip3 install scipy==1.4.1
 
 WORKDIR /root
 
-RUN git clone https://github.com/gaoyuanliang/flusk_utility.git
-RUN mv flusk_utility/* ./
+RUN git clone https://github.com/gaoyuanliang/jessica_flusk.git
+RUN mv jessica_flusk/* ./
 
 WORKDIR /root
 
