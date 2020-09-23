@@ -4,7 +4,7 @@ to build a rest api docker
 
 2. cd docker_folder
 
-3. wget https://raw.githubusercontent.com/gaoyuanliang/flusk_utility/master/Dockerfile
+3. wget https://raw.githubusercontent.com/gaoyuanliang/jessica_flusk/master/Dockerfile
 
 4. docker build -t jessica_rest_api:1.0.1 .
 
